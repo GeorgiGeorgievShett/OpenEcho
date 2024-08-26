@@ -73,6 +73,7 @@ bgcapital.bg - Provides information on Bulgarian capital markets and investment 
 
 imot.bg - Buying, selling, and renting properties.
 bgrealestate.bg - A portal dedicated to real estate listings and news in Bulgaria.
+kvartiribg.com - Renting properties from a private owner.
 
 ***Classifieds and Marketplaces***
 
@@ -80,6 +81,7 @@ olx.bg - Marketplace for buying and selling goods and services.
 bazar.bg - Classified ads for buying and selling items.
 mobile.bg - Marketplace for mobile phones and accessories.
 emag.bg - Online retailer for a wide range of products.
+ecars.bg - eCars forum 
 
 ***Weather, Travel and Tourism***
 
@@ -98,6 +100,13 @@ madams.bg - Adult content and discussions.
 love.bg - Relationships and intimacy for a mature audience.
 sextv.bg - Adult content featuring live streams.
 adult.bg - General adult content site with various explicit materials.
+cupid.bg - Teen dating site
+chat.bg - Dating site
+zapoznalnik.com - Dating site
+elmaz.com - Dating web portal
+chatbg.info - Chat room
+abvchat.com - Chat room
+
 
 ***Forums and Community***
 
@@ -105,6 +114,12 @@ bg-mamma.com - Parenting forum and resources.
 hi.bg - Technology and lifestyle discussions.
 blog.bg - Blogging platform for a wide range of topics.
 babysit.bg - Connecting babysitters and parents.
+bgzona.net/novini.html - Directory site
+cinefish.bg - Cinema Community 
+belot.bg - Belot Playing Community
+
+
+
 
 ***Tech and Digital Trends***
 
@@ -117,3 +132,11 @@ gaming.bg - Focuses on the gaming industry, including news and reviews of games 
 ***Education and Careers***
 uchebnik.bg - Educational resources and materials for students and teachers in Bulgaria.
 karieri.bg - Job search and career development portal.
+
+***eMail**
+abv.bg - eMail provider
+mail.bg - eMail provider 
+mail.dir.bg - eMail provider
+my.contact.bg/index.jhtml - Vivacom eMail
+angelfire.com/ab/xfiles/login.html - xfilesbg eMail
+
