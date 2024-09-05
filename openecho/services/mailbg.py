@@ -52,7 +52,3 @@ def check_username_registration(email_or_username):
     except ValueError:
         return "json_error"
 
-# Example usage
-email_or_username = 'georgi'  # Can be a username or a full email address
-status = check_username_registration(email_or_username)
-print(status)
