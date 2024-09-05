@@ -12,7 +12,7 @@ offnews.bg - Politics and current events. https://id.offmedia.bg/reg/?successurl
 tech.offnews.bg - Tech news. https://id.offmedia.bg/reg/?successurl=tech.offnews.bg/ --SCRAPER COMPLETE 🟢
 trud.bg - National and international news with a focus on politics and business. https://trud.bg/index.php?p=trud_register (HARD)
 telegraph.bg - Coverage of current events and important issues. https://telegraph.bg/registration (Difficult one) (HARD)
-168chasa.bg - Investigative journalism and in-depth coverage. https://www.168chasa.bg/ --SCRAPER COMPLETE 🟢
+168chasa.bg - Investigative journalism and in-depth coverage. https://www.168chasa.bg/
 mediapool.bg - In-depth coverage of current events and analysis. https://www.mediapool.bg/ (HARD)
 plovdiv24.bg - Regional news focused on Plovdiv. --SCRAPER COMPLETE 🟢
 
