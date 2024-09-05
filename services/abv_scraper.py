@@ -31,7 +31,7 @@ def check_username_registration(username):
         print(f"An error occured: {e}")
         return None
 
-username_to_check = 'testuser' # Replace with the actual username you want to check
+username_to_check = 'jakalito' # Replace with the actual username you want to check
 is_registered = check_username_registration(username_to_check)
 
 if is_registered is None:
