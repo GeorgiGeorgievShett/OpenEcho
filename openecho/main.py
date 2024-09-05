@@ -1,3 +1,4 @@
+from OpenEcho.openecho.services import plovdiv24
 from services import abv_scraper
 
 
@@ -9,7 +10,7 @@ def check_all_sites(email):
     # Dictionary that maps each scraper to its corresponding website name
     scrapers = {
         "ABV.bg": abv_scraper.check_username_registration,
-        # Add other scrapers with website names here, e.g.
+        "Plovdiv24.bg": plovdiv24.check_username_registration,
         # "Site2.com": site2_scraper.check_username_registration,
         # "Site3.com": site3_scraper.check_username_registration,
     }
@@ -36,5 +37,5 @@ def check_all_sites(email):
 if __name__ == "__main__":
     import sys
 
-    email = 'jakalito@abv.bg'  # Get email from command-line arguments
+    email = 'georgi@abv.bg'  # Get email from command-line arguments
     check_all_sites(email)

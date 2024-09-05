@@ -15,7 +15,7 @@ trud.bg - National and international news with a focus on politics and business.
 telegraph.bg - Coverage of current events and important issues. https://telegraph.bg/registration (Difficult one)
 168chasa.bg - Investigative journalism and in-depth coverage. https://www.168chasa.bg/
 mediapool.bg - In-depth coverage of current events and analysis. https://www.mediapool.bg/
-plovdiv24.bg - Regional news focused on Plovdiv. https://www.plovdiv24.bg/ (should be easy)
+plovdiv24.bg - Regional news focused on Plovdiv. --SCRAPER COMPLETE 🟢
 
 ***Lifestyle and Entertainment***
 
@@ -85,7 +85,7 @@ karieri.bg - Job search and career development portal. https://www.karieri.bg/
 pomagalo.com - Website for help with schoolwork. https://pomagalo.com
 
 ***eMail**
-abv.bg - eMail provider --scraper finished
+abv.bg - eMail provider --SCRAPER COMPLETE 🟢
 mail.bg - eMail provider  https://mail.bg/auth/lgn
 mail.dir.bg - eMail provider https://mail.dir.bg/
 my.contact.bg/index.jhtml - Vivacom eMail https://my.contact.bg/index.jhtml
