@@ -15,7 +15,7 @@ To get started with OpenEcho, follow these steps:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/OpenEcho.git
+   git clone https://github.com/GeorgiGeorgievShett/OpenEcho
 2. Navigate to the project directory
    cd OpenEcho
 3. Install the necessary depenencies
