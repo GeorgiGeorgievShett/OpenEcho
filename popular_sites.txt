@@ -1,98 +1,59 @@
 ***News Websites***
 
-24chasa.bg - Coverage of current events in Bulgaria and internationally.
-blitz.bg - Updates on current events, politics, and entertainment.
-fakti.bg - Topics including politics, society, and economy.
-nova.bg - News, entertainment, and lifestyle.
-dir.bg - News, community forums, and services.
-btvnovinite.bg - National and international news.
-novini.bg - Current events and various topics.
-actualno.com - Updates on various topics including current affairs and business.
-dariknews.bg - Updates on politics, society, and other areas.
-marica.bg - Regional news focusing on Plovdiv and surrounding areas.
-vesti.bg - National and international news.
-dnes.bg - Current events and various topics.
-news.bg - National and international news.
-trafficnews.bg - Traffic updates and local news.
-puls.bg - Current events and various topics.
-dnevnik.bg - Business, politics, and other key areas.
-offnews.bg - Politics and current events.
-trud.bg - National and international news with a focus on politics and business.
-monitor.bg - Coverage of current events and important issues.
-168chasa.bg - Investigative journalism and in-depth coverage.
-mediapool.bg - In-depth coverage of current events and analysis.
-bgpress.net - National and international events.
-plovdiv24.bg - Regional news focused on Plovdiv.
-zapernik.com - Regional news and lifestyle in Pernik.
-city.bg - Local news and community site for various Bulgarian cities.
-bgfishing.com - Community for fishing enthusiasts.
-bgnovini.bg - A news portal providing updates on current events in Bulgaria.
-novini.love - A news site focusing on a mix of current affairs and lifestyle topics.
-novinibg.com - Another source for Bulgarian and international news.
+24chasa.bg - Coverage of current events in Bulgaria and internationally. https://www.24chasa.bg/login
+nova.bg - News, entertainment, and lifestyle. https://play.nova.bg/login
+dir.bg - News, community forums, and services. https://profile.dir.bg/login?redirect_url=https://dir.bg/?cache=generate
+marica.bg - Regional news focusing on Plovdiv and surrounding areas. **NOT EXACTLY MARICA** https://obqvi.marica.bg/login
+dnes.bg - Current events and various topics. https://www.dnes.bg/login.php
+news.bg - National and international news. https://my.news.bg/login?target_url=https://news.bg (can login with fb or g+)
+trafficnews.bg - Traffic updates and local news.  https://trafficnews.bg/login/
+puls.bg - Current events and various topics. https://www.puls.bg/login
+dnevnik.bg - Business, politics, and other key areas. https://www.dnevnik.bg/ <-- must open manually
+offnews.bg - Politics and current events. https://id.offmedia.bg/reg/?successurl=offnews.bg/
+tech.offnews.bg - Tech news. https://id.offmedia.bg/reg/?successurl=tech.offnews.bg/
+trud.bg - National and international news with a focus on politics and business. https://trud.bg/index.php?p=trud_register
+telegraph.bg - Coverage of current events and important issues. https://telegraph.bg/registration (Difficult one)
+168chasa.bg - Investigative journalism and in-depth coverage. https://www.168chasa.bg/
+mediapool.bg - In-depth coverage of current events and analysis. https://www.mediapool.bg/
+plovdiv24.bg - Regional news focused on Plovdiv. https://www.plovdiv24.bg/ (should be easy)
 
 ***Lifestyle and Entertainment***
 
-edna.bg - Fashion, beauty, and personal development.
-woman.bg - Fashion, health, and relationships for women.
-az-jenata.bg - Women’s interests, including health and relationships.
-lifestyle.bg - Fashion, wellness, and modern living.
-webcafe.bg - Lifestyle and tech news.
-rozali.com - Fashion, beauty, and personal interests.
-ladyzone.bg - Health, beauty, and personal development for women.
+lifestyle.bg - Fashion, wellness, and modern living. https://my.news.bg/login?target_url=https://lifestyle.bg
+webcafe.bg - Lifestyle and tech news. https://webcafe.bg/login
+rozali.com - Fashion, beauty, and personal interests. https://club.rozali.com/registracia.php
 bgfreetime.com - Events, entertainment, and activities in Bulgaria.
-play.bg - Movies, music, and pop culture.
-tialoto.bg - Fashion, beauty, and personal development.
-yes.bg - Entertainment and lifestyle for a younger audience.
-newface.bg - Fashion, beauty, and lifestyle trends.
-gomag.bg - Fashion, beauty, and pop culture.
-myspisanie.bg - Lifestyle, health, and entertainment.
-teenproblem.net - A lifestyle site aimed at teenagers, covering fashion, relationships, and entertainment.
-bg-movies.com - A site dedicated to Bulgarian movies and cinema news.
-4you.bg - Covers a range of topics including lifestyle, entertainment, and local events.
+ozone.bg - ???? https://www.ozone.bg/customer/account/login/
+tialoto.bg - Fashion, beauty, and personal development. https://www.tialoto.bg/login
+teenproblem.net - A lifestyle site aimed at teenagers, covering fashion, relationships, and entertainment. https://www.teenproblem.net/users/register.html
 
 ***Sports***
 
-gong.bg - Sports news and updates.
-sportal.bg - Sports news and updates.
-topsport.bg - Local and international sports events.
-sportlive.bg - Live updates and coverage of sports.
-arenabg.com - Bulgarian and international sports news.
-football24.bg - Focuses on football (soccer) news and updates.
-bgvolleyball.com - Covers news and updates on volleyball, including Bulgarian and international events.
+gong.bg - Sports news and updates. https://gong.bg/
+sportal.bg - Sports news and updates. https://welcome.accounts.sportal.bg/?client=76c07931dc3842f697d9d832b9223271&interaction=2BHo8TBMNpTKLPZkzoWZG&login_case=default&source=&lang=bg&reason=no_session&brand_theme=&email_hint=&email_force=&connection=&email=&verification_ticket=email&application_type=web#/
+topsport.bg - Local and international sports events. https://my.news.bg/login?target_url=https://topsport.bg
+arenabg.com - Bulgarian and international sports news. https://arenabg.com/bg/users/signin/
+football24.bg - Focuses on football (soccer) news and updates. https://football24.bg/wp-login.php?action=lostpassword
 
 ***Business and Finance***
-profit.bg - Business news and economic analysis.
-money.bg - Economic trends and investment news.
-investor.bg - Investment, finance, and market trends.
-capital.bg - Economic trends and business news.
-bloombergtv.bg - Financial and economic news affiliated with Bloomberg.
-bgbusiness.bg - Business news and updates focused on the Bulgarian market.
-bgcapital.bg - Provides information on Bulgarian capital markets and investment opportunities.
+money.bg - Economic trends and investment news. https://my.news.bg/login?target_url=https://money.bg
+investor.bg - Investment, finance, and market trends. https://www.investor.bg/login?url=https://www.investor.bg/
 
 ***Real Estate***
 
-imot.bg - Buying, selling, and renting properties.
-bgrealestate.bg - A portal dedicated to real estate listings and news in Bulgaria.
-kvartiribg.com - Renting properties from a private owner.
+imot.bg - Buying, selling, and renting properties. https://www.imot.bg/pcgi/imot.cgi?act=26&logact=1
+kvartiribg.com - Renting properties from a private owner. https://kvartiribg.com/login.html
 
 ***Classifieds and Marketplaces***
 
 olx.bg - Marketplace for buying and selling goods and services.
-bazar.bg - Classified ads for buying and selling items.
-mobile.bg - Marketplace for mobile phones and accessories.
-emag.bg - Online retailer for a wide range of products.
-ecars.bg - eCars forum 
+bazar.bg - Classified ads for buying and selling items. https://bazar.bg/user/register
+mobile.bg - Marketplace for mobile phones and accessories. https://www.mobile.bg/users/login
+emag.bg - Online retailer for a wide range of products. https://auth.emag.bg/user/login
 
 ***Weather, Travel and Tourism***
 
-sinoptik.bg - Weather forecasting and updates.
-Regional and Local Guides
-plovdivguide.com - Local guide to Plovdiv.
-kmeta.bg - Local governance and municipal news.
-peika.bg - Travel and tourism guides for Bulgaria.
-bg.bg - Directory and resource site with information about Bulgaria.
-bulgariatravel.org - Official tourism site promoting travel and attractions in Bulgaria.
-tourist.bg - Provides travel guides, tips, and information about destinations in Bulgaria.
+peika.bg - Travel and tourism guides for Bulgaria. https://www.peika.bg/
 
 ***Adult Content***
 bongacams.com - Adult webcam site.
@@ -100,8 +61,8 @@ madams.bg - Adult content and discussions.
 love.bg - Relationships and intimacy for a mature audience.
 sextv.bg - Adult content featuring live streams.
 adult.bg - General adult content site with various explicit materials.
-cupid.bg - Teen dating site
-chat.bg - Dating site
+cupid.bg - Teen dating site https://cupid.bg/account/register/
+chat.bg - Dating site https://www.chat.bg/
 zapoznalnik.com - Dating site
 elmaz.com - Dating web portal
 chatbg.info - Chat room
@@ -110,33 +71,23 @@ abvchat.com - Chat room
 
 ***Forums and Community***
 
-bg-mamma.com - Parenting forum and resources.
-hi.bg - Technology and lifestyle discussions.
-blog.bg - Blogging platform for a wide range of topics.
-babysit.bg - Connecting babysitters and parents.
-bgzona.net/novini.html - Directory site
-cinefish.bg - Cinema Community 
-belot.bg - Belot Playing Community
-
-
-
+bg-mamma.com - Parenting forum and resources. https://www.bg-mamma.com/?action=register
+blog.bg - Blogging platform for a wide range of topics. https://blog.bg/
+bgzona.net/novini.html - Directory site http://bgzona.net/signup/signup.php
+cinefish.bg - Cinema Community https://www.cinefish.bg/register.php
 
 ***Tech and Digital Trends***
 
-webradar.bg - Digital trends including tech, gaming, and internet culture.
-start.bg - General portal with news, entertainment, and resources.
-bg-torrent.com - Torrent site for media downloads.
-technews.bg - News and updates on technology, gadgets, and digital trends in Bulgaria.
-gaming.bg - Focuses on the gaming industry, including news and reviews of games and gaming hardware.
+gaming.bg - Focuses on the gaming industry, including news and reviews of games and gaming hardware. https://shop.gaming.bg/auth/register
 
 ***Education and Careers***
-uchebnik.bg - Educational resources and materials for students and teachers in Bulgaria.
-karieri.bg - Job search and career development portal.
+karieri.bg - Job search and career development portal. https://www.karieri.bg/
+pomagalo.com - Website for help with schoolwork. https://pomagalo.com
 
 ***eMail**
-abv.bg - eMail provider
-mail.bg - eMail provider 
-mail.dir.bg - eMail provider
-my.contact.bg/index.jhtml - Vivacom eMail
-angelfire.com/ab/xfiles/login.html - xfilesbg eMail
+abv.bg - eMail provider --scraper finished
+mail.bg - eMail provider  https://mail.bg/auth/lgn
+mail.dir.bg - eMail provider https://mail.dir.bg/
+my.contact.bg/index.jhtml - Vivacom eMail https://my.contact.bg/index.jhtml
+angelfire.com/ab/xfiles/login.html - xfilesbg eMail angelfire.com/ab/xfiles/login.html
 
