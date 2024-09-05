@@ -37,5 +37,5 @@ def check_all_sites(email):
 if __name__ == "__main__":
     import sys
 
-    email = 'georgi@abv.bg'  # Get email from command-line arguments
+    email = 'jakalito@abv.bg'  # Get email from command-line arguments
     check_all_sites(email)
