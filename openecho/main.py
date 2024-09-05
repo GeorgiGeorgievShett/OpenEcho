@@ -1,4 +1,4 @@
-from OpenEcho.openecho.services import plovdiv24
+from OpenEcho.openecho.services import plovdiv24, mailbg
 from services import abv_scraper
 
 
@@ -11,6 +11,7 @@ def check_all_sites(email):
     scrapers = {
         "ABV.bg": abv_scraper.check_username_registration,
         "Plovdiv24.bg": plovdiv24.check_username_registration,
+        "Mail.bg": mailbg.check_username_registration,
         # "Site2.com": site2_scraper.check_username_registration,
         # "Site3.com": site3_scraper.check_username_registration,
     }

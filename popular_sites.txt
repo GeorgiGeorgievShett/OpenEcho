@@ -86,7 +86,7 @@ pomagalo.com - Website for help with schoolwork. https://pomagalo.com
 
 ***eMail**
 abv.bg - eMail provider --SCRAPER COMPLETE 🟢
-mail.bg - eMail provider  https://mail.bg/auth/lgn
+mail.bg - eMail provider  https://mail.bg/auth/lgn --SCRAPER COMPLETE 🟢
 mail.dir.bg - eMail provider https://mail.dir.bg/
 my.contact.bg/index.jhtml - Vivacom eMail https://my.contact.bg/index.jhtml
 angelfire.com/ab/xfiles/login.html - xfilesbg eMail angelfire.com/ab/xfiles/login.html
