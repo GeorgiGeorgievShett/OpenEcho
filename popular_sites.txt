@@ -49,6 +49,7 @@ olx.bg - Marketplace for buying and selling goods and services.
 bazar.bg - Classified ads for buying and selling items. https://bazar.bg/user/register
 mobile.bg - Marketplace for mobile phones and accessories. https://www.mobile.bg/users/login
 emag.bg - Online retailer for a wide range of products. https://auth.emag.bg/user/login
+econt.com - Popular mail service in bulgaria. --SCRAPER COMPLETE 🟢
 
 ***Weather, Travel and Tourism***
 
