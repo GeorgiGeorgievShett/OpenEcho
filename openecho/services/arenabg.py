@@ -31,6 +31,6 @@ def check_username_arenabg(username_or_email, password):
         elif 'не е намерен' in page_text.lower():
             return "user_does_not_exist"
         else:
-            return "Login failed for unknown reasons."
+            return "unknown_response"
     else:
-        return f"Unexpected status code: {response.status_code}"
+        return "unknown_response"
