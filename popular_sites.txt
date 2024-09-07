@@ -29,19 +29,19 @@ teenproblem.net - A lifestyle site aimed at teenagers, covering fashion, relatio
 ***Sports***
 
 gong.bg - Sports news and updates. https://gong.bg/
-sportal.bg - Sports news and updates. https://welcome.accounts.sportal.bg/?client=76c07931dc3842f697d9d832b9223271&interaction=2BHo8TBMNpTKLPZkzoWZG&login_case=default&source=&lang=bg&reason=no_session&brand_theme=&email_hint=&email_force=&connection=&email=&verification_ticket=email&application_type=web#/
+sportal.bg --SCRAPER COMPLETE 🟢
 topsport.bg - Local and international sports events. https://my.news.bg/login?target_url=https://topsport.bg
-arenabg.com - Bulgarian and international sports news. https://arenabg.com/bg/users/signin/
-football24.bg - Focuses on football (soccer) news and updates. https://football24.bg/wp-login.php?action=lostpassword
+arenabg.com - Bulgarian and international sports news. --SCRAPER COMPLETE 🟢
+(EASY but will trigger Forgotten Pass) football24.bg - Focuses on football (soccer) news and updates. https://football24.bg/wp-login.php?action=lostpassword
 
 ***Business and Finance***
 money.bg - Economic trends and investment news. https://my.news.bg/login?target_url=https://money.bg
-investor.bg - Investment, finance, and market trends. https://www.investor.bg/login?url=https://www.investor.bg/
+(EASY but will trigger forgotten pass)investor.bg - Investment, finance, and market trends. https://www.investor.bg/login?url=https://www.investor.bg/
 
 ***Real Estate***
 
-imot.bg - Buying, selling, and renting properties. https://www.imot.bg/pcgi/imot.cgi?act=26&logact=1
-kvartiribg.com - Renting properties from a private owner. https://kvartiribg.com/login.html
+(EASY but will trigger forgotten pass)imot.bg - Buying, selling, and renting properties. https://www.imot.bg/pcgi/imot.cgi?act=26&logact=1
+(EASY but will trigger forgotten pass)kvartiribg.com - Renting properties from a private owner. https://kvartiribg.com/login.html
 
 ***Classifieds and Marketplaces***
 
@@ -53,7 +53,7 @@ econt.com - Popular mail service in bulgaria. --SCRAPER COMPLETE 🟢
 
 ***Weather, Travel and Tourism***
 
-peika.bg - Travel and tourism guides for Bulgaria. https://www.peika.bg/
+(EASY but will trigger forgotten pass)peika.bg - Travel and tourism guides for Bulgaria. https://www.peika.bg/
 
 ***Adult Content***
 bongacams.com - Adult webcam site.
@@ -72,22 +72,21 @@ abvchat.com - Chat room
 ***Forums and Community***
 
 bg-mamma.com - Parenting forum and resources. https://www.bg-mamma.com/?action=register
-blog.bg - Blogging platform for a wide range of topics. https://blog.bg/
-bgzona.net/novini.html - Directory site http://bgzona.net/signup/signup.php
-cinefish.bg - Cinema Community https://www.cinefish.bg/register.php
+blog.bg - Blogging platform for a wide range of topics. https://blog.bg/ --SCRAPER COMPLETE 🟢 TRIGGERS RESET PASS ⚠️
+(EASY with login) bgzona.net/novini.html - Directory site http://bgzona.net/signup/signup.php
+(EASY but will trigger password reset) cinefish.bg - Cinema Community https://www.cinefish.bg/register.php
 
 ***Tech and Digital Trends***
 
-gaming.bg - Focuses on the gaming industry, including news and reviews of games and gaming hardware. https://shop.gaming.bg/auth/register
+(EASY with login) gaming.bg - Focuses on the gaming industry, including news and reviews of games and gaming hardware. https://shop.gaming.bg/auth/register
 
 ***Education and Careers***
-karieri.bg - Job search and career development portal. https://www.karieri.bg/
-pomagalo.com - Website for help with schoolwork. https://pomagalo.com
+(EASY with login) karieri.bg - Job search and career development portal. https://www.karieri.bg/
+(Easy-ish? with register) pomagalo.com - Website for help with schoolwork. https://pomagalo.com
 
 ***eMail**
 abv.bg - eMail provider --SCRAPER COMPLETE 🟢
 mail.bg - eMail provider  https://mail.bg/auth/lgn --SCRAPER COMPLETE 🟢
-mail.dir.bg - eMail provider https://mail.dir.bg/
-my.contact.bg/index.jhtml - Vivacom eMail https://my.contact.bg/index.jhtml
-angelfire.com/ab/xfiles/login.html - xfilesbg eMail angelfire.com/ab/xfiles/login.html
+(impossible without triggers) mail.dir.bg - eMail provider https://mail.dir.bg/
+(VERY HARD)(ima interesni reset password opcii s nomer + emeil) my.contact.bg/index.jhtml - Vivacom eMail https://my.contact.bg/index.jhtml
 
