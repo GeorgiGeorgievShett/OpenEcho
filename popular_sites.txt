@@ -50,6 +50,7 @@ bazar.bg - Classified ads for buying and selling items. https://bazar.bg/user/re
 mobile.bg - Marketplace for mobile phones and accessories. https://www.mobile.bg/users/login
 emag.bg - Online retailer for a wide range of products. https://auth.emag.bg/user/login
 econt.com - Popular mail service in bulgaria. --SCRAPER COMPLETE 🟢
+cars.bg - Popular site which is a car marketplace.
 
 ***Weather, Travel and Tourism***
 
@@ -65,20 +66,17 @@ cupid.bg - Teen dating site https://cupid.bg/account/register/
 chat.bg - Dating site https://www.chat.bg/
 zapoznalnik.com - Dating site
 elmaz.com - Dating web portal
-chatbg.info - Chat room
-abvchat.com - Chat room
 
 
 ***Forums and Community***
 
 bg-mamma.com - Parenting forum and resources. https://www.bg-mamma.com/?action=register
 blog.bg - Blogging platform for a wide range of topics. https://blog.bg/ --SCRAPER COMPLETE 🟢 TRIGGERS RESET PASS ⚠️
-(EASY with login) bgzona.net/novini.html - Directory site http://bgzona.net/signup/signup.php
 (EASY but will trigger password reset) cinefish.bg - Cinema Community https://www.cinefish.bg/register.php
 
 ***Tech and Digital Trends***
 
-(EASY with login) gaming.bg - Focuses on the gaming industry, including news and reviews of games and gaming hardware. https://shop.gaming.bg/auth/register
+(uses Cookies) gaming.bg - Focuses on the gaming industry, including news and reviews of games and gaming hardware. https://shop.gaming.bg/auth/register
 
 ***Education and Careers***
 (EASY with login) karieri.bg - Job search and career development portal. https://www.karieri.bg/
