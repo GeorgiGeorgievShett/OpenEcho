@@ -1,4 +1,5 @@
-from OpenEcho.openecho.services import plovdiv24, mailbg, techoffnews, econt, abv_scraper, sportal, arenabg, pomagalo
+from OpenEcho.openecho.services import plovdiv24, mailbg, techoffnews, econt, abv_scraper, sportal, arenabg, pomagalo, \
+    teenproblem
 
 
 # Import other scrapers here
@@ -15,7 +16,8 @@ def check_all_sites(email):
         "Econt": econt.check_username_registration,
         "Sportal": sportal.check_username_registration,
         "Arenabg": arenabg.check_username_arenabg,
-        "Pomagalo": pomagalo.check_username_pomagalo
+        "Pomagalo": pomagalo.check_username_pomagalo,
+        "Teenproblem.net": teenproblem.check_username_teenproblem,
         # "Site3.com": site3_scraper.check_username_registration,
     }
 

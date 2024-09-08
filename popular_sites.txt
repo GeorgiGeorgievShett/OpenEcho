@@ -1,60 +1,58 @@
 ***News Websites***
 
-24chasa.bg - Coverage of current events in Bulgaria and internationally. https://www.24chasa.bg/login
-nova.bg - News, entertainment, and lifestyle. https://play.nova.bg/login
-dir.bg - News, community forums, and services. https://profile.dir.bg/login?redirect_url=https://dir.bg/?cache=generate
-marica.bg - Regional news focusing on Plovdiv and surrounding areas. **NOT EXACTLY MARICA** https://obqvi.marica.bg/login
-dnes.bg - Current events and various topics. https://www.dnes.bg/login.php --
-news.bg - National and international news. https://my.news.bg/login?target_url=https://news.bg (can login with fb or g+) (HARD)
-puls.bg - Current events and various topics. https://www.puls.bg/login (HARD)
-dnevnik.bg - Business, politics, and other key areas. https://www.dnevnik.bg/ <-- must open manually (HARD)
+(Trigger)24chasa.bg - Coverage of current events in Bulgaria and internationally. https://www.24chasa.bg/login
+(Trigger)nova.bg - News, entertainment, and lifestyle. https://play.nova.bg/login
+(Trigger)dir.bg - News, community forums, and services. https://profile.dir.bg/login?redirect_url=https://dir.bg/?cache=generate
+(Trigger)marica.bg - Regional news focusing on Plovdiv and surrounding areas. **NOT EXACTLY MARICA** https://obqvi.marica.bg/login
+(Trigger)dnes.bg - Current events and various topics. https://www.dnes.bg/login.php --
+(Trigger?)news.bg - National and international news. https://my.news.bg/login?target_url=https://news.bg (can login with fb or g+) (HARD)
+(Trigger)puls.bg - Current events and various topics. https://www.puls.bg/login (HARD)
+(Hard, Maybe with Trigger)dnevnik.bg - Business, politics, and other key areas. https://www.dnevnik.bg/ <-- must open manually (HARD)
 offnews.bg - Politics and current events. https://id.offmedia.bg/reg/?successurl=offnews.bg/ --SCRAPER COMPLETE 🟢
 tech.offnews.bg - Tech news. https://id.offmedia.bg/reg/?successurl=tech.offnews.bg/ --SCRAPER COMPLETE 🟢
-trud.bg - National and international news with a focus on politics and business. https://trud.bg/index.php?p=trud_register (HARD)
-telegraph.bg - Coverage of current events and important issues. https://telegraph.bg/registration (Difficult one) (HARD)
-168chasa.bg - Investigative journalism and in-depth coverage. https://www.168chasa.bg/
-mediapool.bg - In-depth coverage of current events and analysis. https://www.mediapool.bg/ (HARD)
+(Hard)trud.bg - National and international news with a focus on politics and business. https://trud.bg/index.php?p=trud_register (HARD)
+(Hard)telegraph.bg - Coverage of current events and important issues. https://telegraph.bg/registration (Difficult one) (HARD)
+(Trigger)168chasa.bg - Investigative journalism and in-depth coverage. https://www.168chasa.bg/
+(Trigger)mediapool.bg - In-depth coverage of current events and analysis. https://www.mediapool.bg/ (HARD)
 plovdiv24.bg - Regional news focused on Plovdiv. --SCRAPER COMPLETE 🟢
 
 ***Lifestyle and Entertainment***
 
-lifestyle.bg - Fashion, wellness, and modern living. https://my.news.bg/login?target_url=https://lifestyle.bg
-webcafe.bg - Lifestyle and tech news. https://webcafe.bg/login
-rozali.com - Fashion, beauty, and personal interests. https://club.rozali.com/registracia.php
-bgfreetime.com - Events, entertainment, and activities in Bulgaria.
-ozone.bg - ???? https://www.ozone.bg/customer/account/login/
-tialoto.bg - Fashion, beauty, and personal development. https://www.tialoto.bg/login
-teenproblem.net - A lifestyle site aimed at teenagers, covering fashion, relationships, and entertainment. https://www.teenproblem.net/users/register.html
+(Trigger Newsbg)lifestyle.bg - Fashion, wellness, and modern living. https://my.news.bg/login?target_url=https://lifestyle.bg
+(Trigger)webcafe.bg - Lifestyle and tech news. https://webcafe.bg/login
+(Без емейл, само юзърнейм)rozali.com - Fashion, beauty, and personal interests. https://club.rozali.com/registracia.php
+(Trigger)ozone.bg - ???? https://www.ozone.bg/customer/account/login/
+(Trigger)tialoto.bg - Fashion, beauty, and personal development. https://www.tialoto.bg/login
+teenproblem.net - A lifestyle site aimed at teenagers, covering fashion, relationships, and entertainment. --SCRAPER COMPLETE 🟢
 
 ***Sports***
 
-gong.bg - Sports news and updates. https://gong.bg/
+(Trigger)gong.bg - Sports news and updates. https://gong.bg/
 sportal.bg --SCRAPER COMPLETE 🟢
-topsport.bg - Local and international sports events. https://my.news.bg/login?target_url=https://topsport.bg
+(Trigger Newsbg) topsport.bg - Local and international sports events. https://my.news.bg/login?target_url=https://topsport.bg
 arenabg.com - Bulgarian and international sports news. --SCRAPER COMPLETE 🟢
-(EASY but will trigger Forgotten Pass) football24.bg - Focuses on football (soccer) news and updates. https://football24.bg/wp-login.php?action=lostpassword
+(Trigger) football24.bg - Focuses on football (soccer) news and updates. https://football24.bg/wp-login.php?action=lostpassword
 
 ***Business and Finance***
-money.bg - Economic trends and investment news. https://my.news.bg/login?target_url=https://money.bg
-(EASY but will trigger forgotten pass)investor.bg - Investment, finance, and market trends. https://www.investor.bg/login?url=https://www.investor.bg/
+(Trigger Newsbg)money.bg - Economic trends and investment news. https://my.news.bg/login?target_url=https://money.bg
+(Trigger)investor.bg - Investment, finance, and market trends. https://www.investor.bg/login?url=https://www.investor.bg/
 
 ***Real Estate***
 
-(EASY but will trigger forgotten pass)imot.bg - Buying, selling, and renting properties. https://www.imot.bg/pcgi/imot.cgi?act=26&logact=1
-(EASY but will trigger forgotten pass)kvartiribg.com - Renting properties from a private owner. https://kvartiribg.com/login.html
+(Trigger)imot.bg - Buying, selling, and renting properties. https://www.imot.bg/pcgi/imot.cgi?act=26&logact=1
+(Trigger)kvartiribg.com - Renting properties from a private owner. https://kvartiribg.com/login.html
 
 ***Classifieds and Marketplaces***
 
-olx.bg - Marketplace for buying and selling goods and services.
-bazar.bg - Classified ads for buying and selling items. https://bazar.bg/user/register
-mobile.bg - Marketplace for mobile phones and accessories. https://www.mobile.bg/users/login
-emag.bg - Online retailer for a wide range of products. https://auth.emag.bg/user/login
+(hard)olx.bg - Marketplace for buying and selling goods and services.
+(Trigger)bazar.bg - Classified ads for buying and selling items. https://bazar.bg/user/register
+(Trigger)mobile.bg - Marketplace for mobile phones and accessories. https://www.mobile.bg/users/login
+(Hard)emag.bg - Online retailer for a wide range of products. https://auth.emag.bg/user/login
 econt.com - Popular mail service in bulgaria. --SCRAPER COMPLETE 🟢
-cars.bg - Popular site which is a car marketplace.
 
 ***Weather, Travel and Tourism***
 
-(EASY but will trigger forgotten pass)peika.bg - Travel and tourism guides for Bulgaria. https://www.peika.bg/
+(Trigger)peika.bg - Travel and tourism guides for Bulgaria. https://www.peika.bg/
 
 ***Adult Content***
 bongacams.com - Adult webcam site.
@@ -70,21 +68,21 @@ elmaz.com - Dating web portal
 
 ***Forums and Community***
 
-bg-mamma.com - Parenting forum and resources. https://www.bg-mamma.com/?action=register
-blog.bg - Blogging platform for a wide range of topics. https://blog.bg/ --SCRAPER COMPLETE 🟢 TRIGGERS RESET PASS ⚠️
-(EASY but will trigger password reset) cinefish.bg - Cinema Community https://www.cinefish.bg/register.php
+(Tricky)bg-mamma.com - Parenting forum and resources. https://www.bg-mamma.com/?action=register
+(Trigger)blog.bg - Blogging platform for a wide range of topics. https://blog.bg/ --SCRAPER COMPLETE 🟢 TRIGGERS RESET PASS ⚠️
+(Trigger) cinefish.bg - Cinema Community https://www.cinefish.bg/register.php
 
 ***Tech and Digital Trends***
 
-(uses Cookies) gaming.bg - Focuses on the gaming industry, including news and reviews of games and gaming hardware. https://shop.gaming.bg/auth/register
+(Tricky) gaming.bg - Focuses on the gaming industry, including news and reviews of games and gaming hardware. https://shop.gaming.bg/auth/register
 
 ***Education and Careers***
-(EASY with login) karieri.bg - Job search and career development portal. https://www.karieri.bg/
-(Easy-ish? with register) pomagalo.com - Website for help with schoolwork. https://pomagalo.com
+(Tricky) karieri.bg - Job search and career development portal. https://www.karieri.bg/
+pomagalo.com - Website for help with schoolwork. https://pomagalo.com --SCRAPER COMPLETE 🟢 (Without SSL certificate)
 
 ***eMail**
 abv.bg - eMail provider --SCRAPER COMPLETE 🟢
 mail.bg - eMail provider  https://mail.bg/auth/lgn --SCRAPER COMPLETE 🟢
-(impossible without triggers) mail.dir.bg - eMail provider https://mail.dir.bg/
+(Trigger) mail.dir.bg - eMail provider https://mail.dir.bg/
 (VERY HARD)(ima interesni reset password opcii s nomer + emeil) my.contact.bg/index.jhtml - Vivacom eMail https://my.contact.bg/index.jhtml
 
