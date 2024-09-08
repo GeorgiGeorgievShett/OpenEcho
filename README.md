@@ -27,4 +27,34 @@ Run OpenEcho with the following command:
 Replace your-email@example.com with the email address you want to check. OpenEcho will output a list of websites where the email address is registered.
 
 
+## Rules and Coding Standards
+Adding a New Scraper to OpenEcho
+To add a new scraper to OpenEcho, follow these steps to ensure consistency with existing scrapers:
+
+**Create a New Scraper Module:**
+
+**File Naming:** Use a descriptive name for the file, e.g., newsite.py.
+Function Implementation: Implement a function  **___check_email____"enter website name here"** (or similar) in your module. This function should take an email as input and return one of the following values:
+
+**user_exists**
+
+**user_does_not_exist**
+
+**captcha_error**
+
+**request_error**
+
+
+
+**Updating main.py:**
+
+Import Your New Scraper: Add an import statement for your new scraper at the beginning of main.py.
+Add to Scraper Dictionary: Update the scrapers dictionary in the check_all_sites function to include your new site and its corresponding function.
+Follow Output Conventions:
+
+Ensure your scraper function handles responses and errors according to the defined output statuses.
+Return one of the four statuses (user_exists, user_does_not_exist, captcha_error, or request_error) based on the site's response.
+Testing:
+
+Test your scraper thoroughly to confirm it behaves correctly and matches the expected output formats.
 
