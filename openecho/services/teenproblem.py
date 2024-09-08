@@ -2,7 +2,7 @@ import requests
 from bs4 import BeautifulSoup
 
 
-def check_user_exists(email: str, password: str) -> str:
+def check_username_teenproblem(email: str) -> str:
     url = 'https://www.teenproblem.net/users/login.html?redirect=/users/register/step3.html'
 
     headers = {
@@ -19,7 +19,7 @@ def check_user_exists(email: str, password: str) -> str:
     payload = {
         'redirect': '/users/register/step3.html',
         'data[email]': email,
-        'data[password]': password,
+        'data[password]': '321321321',
         'login_btn': ''
     }
 

@@ -36,6 +36,7 @@ arenabg.com - Bulgarian and international sports news. --SCRAPER COMPLETE 🟢
 ***Business and Finance***
 (Trigger Newsbg)money.bg - Economic trends and investment news. https://my.news.bg/login?target_url=https://money.bg
 (Trigger)investor.bg - Investment, finance, and market trends. https://www.investor.bg/login?url=https://www.investor.bg/
+(New) https://banker.bg/moyat-profil/
 
 ***Real Estate***
 
@@ -85,4 +86,7 @@ abv.bg - eMail provider --SCRAPER COMPLETE 🟢
 mail.bg - eMail provider  https://mail.bg/auth/lgn --SCRAPER COMPLETE 🟢
 (Trigger) mail.dir.bg - eMail provider https://mail.dir.bg/
 (VERY HARD)(ima interesni reset password opcii s nomer + emeil) my.contact.bg/index.jhtml - Vivacom eMail https://my.contact.bg/index.jhtml
+
+***MUSIC***
+(Trigger) metalhangar18.com - Heavy Metal Music Website
 
