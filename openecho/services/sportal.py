@@ -25,8 +25,3 @@ def check_username_registration(email):
             return "user_exists"
     else:
         return "unknown_response"
-
-# Example usage
-email = "hope_hope_1996@abv.bg"
-status = check_username_registration(email)
-print(f"Status for {email}: {status}")

@@ -1,5 +1,6 @@
 from OpenEcho.openecho.services import plovdiv24, mailbg, techoffnews, econt, abv_scraper, sportal, arenabg, pomagalo, \
     teenproblem
+from OpenEcho.openecho.services.dnevnik import check_dnevnik_user_registration
 
 
 # Import other scrapers here
@@ -18,6 +19,7 @@ def check_all_sites(email):
         "Arenabg": arenabg.check_username_arenabg,
         "Pomagalo": pomagalo.check_username_pomagalo,
         "Teenproblem.net": teenproblem.check_username_teenproblem,
+        "Dnevnik.bg": check_dnevnik_user_registration,
         # "Site3.com": site3_scraper.check_username_registration,
     }
 
@@ -41,5 +43,5 @@ def check_all_sites(email):
 
 
 if __name__ == "__main__":
-    email = ''  # Get email from command-line arguments
+    email = 'georgi@abv.bg'  # Get email from command-line arguments
     check_all_sites(email)
