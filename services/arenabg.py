@@ -2,13 +2,13 @@ import requests
 from bs4 import BeautifulSoup
 
 
-def check_username_arenabg(username_or_email, password):
+def check_username_arenabg(email):
     session = requests.Session()
 
     login_url = "https://arenabg.com/bg/users/signin/"
     login_data = {
-        "username_or_email": username_or_email,
-        "password": password
+        "username_or_email": email,
+        "password": '321321321'
     }
 
     headers = {
@@ -34,3 +34,4 @@ def check_username_arenabg(username_or_email, password):
             return "unknown_response"
     else:
         return "unknown_response"
+
