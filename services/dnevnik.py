@@ -30,7 +30,3 @@ def check_dnevnik_user_registration(email):
         return "request_error"
     except ValueError:
         return "json_error"
-
-# Example usage
-result = check_dnevnik_user_registration("testtesttest@abv.bg")
-print(result)

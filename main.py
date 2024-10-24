@@ -1,7 +1,9 @@
 import re
 from services import plovdiv24, mailbg, techoffnews, econt, abv_scraper, sportal, arenabg, pomagalo, teenproblem
 from services.dnevnik import check_dnevnik_user_registration
-
+from services.burgas24 import simulate_burgas24_login
+from services.varna24 import simulate_varna24_login
+from services.mediapool import check_mediapool_email_registration
 
 class InvalidEmailError(Exception):
     """Custom exception for invalid email addresses."""
@@ -62,6 +64,9 @@ def check_all_sites(email):
         "Pomagalo.com": pomagalo.check_username_pomagalo,
         "Teenproblem.net": teenproblem.check_username_teenproblem,
         "Dnevnik.bg": check_dnevnik_user_registration,
+        "Burgas24.bg": simulate_burgas24_login,
+        "Varna24.bg": simulate_varna24_login,
+        "Mediapool.bg": check_mediapool_email_registration,
     }
 
     # Loop through each scraper, testing the email/username
