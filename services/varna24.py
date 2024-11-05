@@ -27,10 +27,8 @@ def simulate_varna24_login(email, password="generic_password"):
             return "user_exists"  # Email exists, but the password is wrong
         elif "Няма регистрация с посочения email/потребителско име!" in response.text:
             return "user_does_not_exist"  
-        elif "забравена парола" in response.text or "Invalid" in response.text:
-            return "login_failed"  
         else:
-            return "unknown_response"
+            return "request_error"
 
     except requests.RequestException as e:
         print(f"Request error: {e}")

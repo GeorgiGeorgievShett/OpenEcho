@@ -17,15 +17,12 @@ def check_username_arenabg(email):
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36"
     }
 
-    # Send POST request to login
     response = session.post(login_url, data=login_data, headers=headers)
 
-    # Check if response is not a redirect (i.e., not 302)
     if response.status_code == 200:
         soup = BeautifulSoup(response.text, 'html.parser')
         page_text = soup.get_text()
 
-        # Check for potential error messages in the login response
         if 'грешна' in page_text.lower():
             return "user_exists"
         elif 'не е намерен' in page_text.lower():

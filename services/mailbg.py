@@ -1,9 +1,7 @@
 import requests
 
 def check_username_registration(email_or_username):
-    # If the input is just a username or a different email, adjust it
     if '@mail.bg' not in email_or_username:
-        # Strip the domain part if it's not @mail.bg
         username = email_or_username.split('@')[0]
         email = f"{username}@mail.bg"
     else:
@@ -21,24 +19,22 @@ def check_username_registration(email_or_username):
     }
 
     cookies = {
-        'OAID': '1234567890abcdef',  # Example value
+        'OAID': '1234567890abcdef',
         'current_page': 'mailbox/inbox',
-        's': 'abcdef1234567890',    # Example value
+        's': 'abcdef1234567890',
         't': 'q7_w9g-42_s.e3r7.28.bg',
-        'vid': '0987654321fedcba'   # Example value
+        'vid': '0987654321fedcba' 
     }
 
     try:
         response = requests.get(url, headers=headers, cookies=cookies)
         response.raise_for_status()
 
-        # Check if response is JSON
         try:
             response_json = response.json()
         except ValueError:
             return "response_not_json"
 
-        # Check for email registration status in response
         if response_json.get('result') is True:
             return "user_does_not_exist"
         elif response_json.get('result') is False:

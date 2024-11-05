@@ -6,7 +6,7 @@ def check_mediapool_email_registration(email):
     Check if an email is already registered on Mediapool.bg by submitting a registration attempt.
     This version includes extraction of the CSRF _nonce token before submitting the form.
     """
-    registration_url = 'https://www.mediapool.bg/users/reg'  # Registration URL
+    registration_url = 'https://www.mediapool.bg/users/reg' 
     
     headers = {
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36',
@@ -16,7 +16,6 @@ def check_mediapool_email_registration(email):
     session = requests.Session()
 
     try:
-        # First request to get the CSRF token (_nonce)
         response = session.get(registration_url, headers=headers)
         
         
@@ -38,17 +37,15 @@ def check_mediapool_email_registration(email):
             'newsletter_1': '1',  
         }
 
-        # Second request: attempt registration
         registration_response = session.post(registration_url, data=payload, headers=headers)
         
 
-        # Check for specific phrases in the response content
         if "Имейл адресът, който сте въвели, вече е регистриран в Mediapool.bg" in registration_response.text:
-            return "user_exists"  # Email is already registered
+            return "user_exists" 
         elif "невалидна заявка" in registration_response.text or "Грешка" in registration_response.text:
-            return "request_error"  # If there is an issue with form submission
+            return "request_error" 
         else:
-            return "user_does_not_exist"  # Other responses not handled
+            return "user_does_not_exist"
 
     except requests.RequestException as e:
         return "request_error"

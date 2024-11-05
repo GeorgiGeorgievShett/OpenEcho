@@ -16,7 +16,7 @@ def check_dnevnik_user_registration(email):
 
     try:
         response = requests.post(url, headers=headers, data=payload)
-        response.raise_for_status()  # Raise an error for bad responses
+        response.raise_for_status()
 
         response_data = response.json()
         if response_data.get("err_cnt") == 0:

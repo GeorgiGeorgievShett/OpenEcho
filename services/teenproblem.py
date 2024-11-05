@@ -26,7 +26,7 @@ def check_username_teenproblem(email: str) -> str:
     response = requests.post(url, headers=headers, data=payload)
     response.raise_for_status()
 
-    # Check response content
+
     soup = BeautifulSoup(response.text, 'html.parser')
 
     if soup.find('div', class_='msg not_correct') and 'Грешна парола' in response.text:

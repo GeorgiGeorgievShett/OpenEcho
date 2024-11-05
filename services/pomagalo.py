@@ -1,7 +1,6 @@
 import requests
 import warnings
 
-# Suppress InsecureRequestWarning
 warnings.simplefilter('ignore', requests.packages.urllib3.exceptions.InsecureRequestWarning)
 
 def check_username_pomagalo(email: str) -> str:

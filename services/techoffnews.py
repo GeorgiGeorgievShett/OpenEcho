@@ -2,7 +2,6 @@ import requests
 
 
 def check_username_registration(email):
-    # URL for the email check
     url = f"https://id.offmedia.bg/ajax/email/?email={requests.utils.quote(email)}"
 
     headers = {
@@ -17,7 +16,6 @@ def check_username_registration(email):
         response = requests.get(url, headers=headers)
         response.raise_for_status()
 
-        # Check the response content
         if response.text.strip() == "OK":
             return "user_does_not_exist"
         elif response.text.strip() == "ERR":

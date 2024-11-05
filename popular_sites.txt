@@ -15,22 +15,9 @@
 (hard)olx.bg - Marketplace for buying and selling goods and services.
 (Hard)emag.bg - Online retailer for a wide range of products. https://auth.emag.bg/user/login
 
-***Adult Content***
-bongacams.com - Adult webcam site.
-madams.bg - Adult content and discussions.
-love.bg - Relationships and intimacy for a mature audience.
-sextv.bg - Adult content featuring live streams.
-adult.bg - General adult content site with various explicit materials.
-cupid.bg - Teen dating site https://cupid.bg/account/register/
-chat.bg - Dating site https://www.chat.bg/
-zapoznalnik.com - Dating site
-elmaz.com - Dating web portal
-
-
 ***Forums and Community***
 
 (Tricky)bg-mamma.com - Parenting forum and resources. https://www.bg-mamma.com/?action=register
-(Trigger)blog.bg - Blogging platform for a wide range of topics. https://blog.bg/ --SCRAPER COMPLETE 🟢 TRIGGERS RESET PASS ⚠️
 
 ***Tech and Digital Trends***
 

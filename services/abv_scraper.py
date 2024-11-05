@@ -1,7 +1,6 @@
 import requests
 
 def check_username_registration(email):
-    # Remove the domain part if it's an abv.bg email
     username = email.split('@')[0]
 
     base_url = 'https://passport.abv.bg/app/profiles/validateename'
