@@ -6,6 +6,9 @@
 ![Project Logo](services/images/openechologo.jpg)
 
 ![GitHub all releases](https://img.shields.io/github/downloads/GeorgiGeorgievShett/OpenEcho/total?color=blue&style=flat-square)
+**Want to donate?**
+BTC Wallet: bc1q37200rzvzpqlumqe8vctcr6vzakuwgmxk3wa3x
+Monero Wallet: 861hzaFiGHuHzFsVbuk6zEj6uecBp9k38ecg8vQeVNN45VR6NL2fYvg1fSiYRhnDuYPALcWRBsHzMgVy652iVxJk3biTQfY
 
 ## Features
 
