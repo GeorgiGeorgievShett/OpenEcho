@@ -1,6 +1,6 @@
 # OpenEcho
 
-**OpenEcho** is a tool designed to check the registration of email addresses across a range of popular websites. Inspired by similar tools like [holehe](https://github.com/AnonymouX/holehe), OpenEcho provides a streamlined way to verify if an email address is associated with accounts on various online platforms.
+**OpenEcho** is a tool designed to check the registration of email addresses across a range of popular bulgarian websites. Inspired by similar tools like [holehe](https://github.com/AnonymouX/holehe), OpenEcho provides a streamlined way to verify if an email address is associated with accounts on various online platforms.
 
 ## Features
 
@@ -13,18 +13,19 @@
 
 To get started with OpenEcho, follow these steps:
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/GeorgiGeorgievShett/OpenEcho
-2. Navigate to the project directory
-   cd OpenEcho
-3. Install the necessary depenencies
-   pip -r install requirements.txt
+Clone the repository:
+git clone https://github.com/GeorgiGeorgievShett/OpenEcho
 
-**Usage**
+Navigate to the project directory:
+cd OpenEcho
+
+Install the necessary dependencies:
+pip install -r requirements.txt
+
+## Usage
 Run OpenEcho with the following command:
-   python openecho.py --email your-email@example.com
-Replace your-email@example.com with the email address you want to check. OpenEcho will output a list of websites where the email address is registered.
+
+python main.py
 
 
 ## Rules and Coding Standards
