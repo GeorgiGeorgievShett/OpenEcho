@@ -4,6 +4,12 @@ from services.dnevnik import check_dnevnik_user_registration
 from services.burgas24 import simulate_burgas24_login
 from services.varna24 import simulate_varna24_login
 from services.mediapool import check_mediapool_email_registration
+import argparse
+
+parser = argparse.ArgumentParser(description='To check if an email is registered on popular Bulgarian websites use python3 main.py <email>')
+args=parser.parse_args()
+
+
 
 class InvalidEmailError(Exception):
     """Custom exception for invalid email addresses."""
