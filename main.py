@@ -14,15 +14,9 @@ class InvalidEmailError(Exception):
         super().__init__(self.message)
 
 
-def validate_email(email: str, allowed_domains: list) -> None:
-    """Validate that the email ends with a valid domain."""
-    
-    pattern = r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$'
-    if not re.match(pattern, email):
-        raise InvalidEmailError(email)
-
-    
-    if not any(email.endswith(domain) for domain in allowed_domains):
+def validate_email(email: str) -> None:
+    """Validate that the email contains an '@' symbol."""
+    if "@" not in email:
         raise InvalidEmailError(email)
 
 
@@ -42,17 +36,14 @@ def display_logo():
 
 
 def check_all_sites(email):
-    allowed_domains = ['@abv.bg', '@gmail.com'] 
-
     try:
-        validate_email(email, allowed_domains) 
+        validate_email(email)  # Now only checks for '@' in the email
     except InvalidEmailError as e:
-        print(str(e)) 
+        print(str(e))
         return False  
 
     print(f"\nChecking availability for: {email}")
 
-   
     scrapers = {
         "ABV.bg": abv_scraper.check_username_registration,
         "Plovdiv24.bg": plovdiv24.check_username_registration,
@@ -69,10 +60,8 @@ def check_all_sites(email):
         "Mediapool.bg": check_mediapool_email_registration,
     }
 
-    
     for site_name, scraper in scrapers.items():
         if site_name == "Mail.bg":
-            
             modified_email = email.split('@')[0] + '@mail.bg'
             result = scraper(modified_email)
             email_display = modified_email  
@@ -80,7 +69,6 @@ def check_all_sites(email):
             result = scraper(email)
             email_display = email  
 
-        
         if result == "user_exists":
             print(f"🔴 {email_display} is already registered on {site_name}.")
         elif result == "user_does_not_exist":
@@ -101,4 +89,4 @@ if __name__ == "__main__":
     while True: 
         email = input("Enter email address: ")
         if check_all_sites(email):
-            break  
+            break
