@@ -3,7 +3,7 @@
 **OpenEcho** is a tool designed to check the registration of email addresses across a range of popular bulgarian websites. Inspired by similar tools like [holehe](https://github.com/AnonymouX/holehe), OpenEcho provides a streamlined way to verify if an email address is associated with accounts on various online platforms.
 
 
-![Project Logo](images/openechologo.jpg)
+![Project Logo](services/images/openechologo.jpg)
 
 ![GitHub all releases](https://img.shields.io/github/downloads/GeorgiGeorgievShett/OpenEcho/total?color=blue&style=flat-square)
 
