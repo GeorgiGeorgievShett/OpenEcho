@@ -2,6 +2,11 @@
 
 **OpenEcho** is a tool designed to check the registration of email addresses across a range of popular bulgarian websites. Inspired by similar tools like [holehe](https://github.com/AnonymouX/holehe), OpenEcho provides a streamlined way to verify if an email address is associated with accounts on various online platforms.
 
+
+
+
+![GitHub all releases](https://img.shields.io/github/downloads/GeorgiGeorgievShett/OpenEcho/total?color=blue&style=flat-square)
+
 ## Features
 
 - **Email Address Verification**: Quickly check if an email address is registered on a wide array of popular websites.
@@ -50,12 +55,13 @@ Function Implementation: Implement a function  **___check_email____"enter websit
 **Updating main.py:**
 
 Import Your New Scraper: Add an import statement for your new scraper at the beginning of main.py.
-Add to Scraper Dictionary: Update the scrapers dictionary in the check_all_sites function to include your new site and its corresponding function.
-Follow Output Conventions:
 
+Add to Scraper Dictionary: Update the scrapers dictionary in the check_all_sites function to include your new site and its corresponding function.
+
+Follow Output Conventions:
 Ensure your scraper function handles responses and errors according to the defined output statuses.
 Return one of the four statuses (user_exists, user_does_not_exist, captcha_error, or request_error) based on the site's response.
-Testing:
 
+Testing:
 Test your scraper thoroughly to confirm it behaves correctly and matches the expected output formats.
 
