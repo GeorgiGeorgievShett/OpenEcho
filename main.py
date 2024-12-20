@@ -1,6 +1,6 @@
 import re
 from services import plovdiv24, mailbg, techoffnews, econt, abv_scraper, sportal, arenabg, pomagalo, teenproblem, kaufland
-from services import forlife, chitanka
+from services import forlife, chitanka, vitamag
 from services.dnevnik import check_dnevnik_user_registration
 from services.burgas24 import simulate_burgas24_login
 from services.varna24 import simulate_varna24_login
@@ -61,7 +61,8 @@ def check_all_sites(email):
         "Mediapool.bg": check_mediapool_email_registration,
         "Kaufland.bg": kaufland.check_kaufland_email,
         "Forlife.bg": check_forlife_email,
-        "Chitanka.info" check_chitanka_email
+        "Chitanka.info" check_chitanka_email,
+        "Vitamag.bg": check_vitamag_email
     }
 
     for site_name, scraper in scrapers.items():
