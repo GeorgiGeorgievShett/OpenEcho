@@ -1,11 +1,11 @@
 import requests
 
-def chitanka_login_check(user_input, password):
+def chitanka_login_check(email):
     try:
-        if "@" in user_input:
-            username = user_input.split("@")[0]
+        if "@" in email:
+            username = email.split("@")[0]
         else:
-            username = user_input
+            username = email
         
         session = requests.Session()
         
@@ -20,7 +20,7 @@ def chitanka_login_check(user_input, password):
         payload = {
             "returnto": "https://chitanka.info/authors/last-name/%D0%9B?cache=1734725385",
             "username": username,
-            "password": password,
+            "password": "321321321",
         }
         
         url = "https://chitanka.info/login"
@@ -36,4 +36,3 @@ def chitanka_login_check(user_input, password):
 
     except Exception:
         return "request_error"
-
