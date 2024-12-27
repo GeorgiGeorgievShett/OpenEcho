@@ -1,5 +1,5 @@
 import re
-from services import plovdiv24, mailbg, techoffnews, econt, abv_scraper, sportal, arenabg, pomagalo, teenproblem, kaufland
+from services import plovdiv24, mailbg, techoffnews, econt, abv_scraper, sportal, arenabg, pomagalo, teenproblem
 from services import chitanka, forlife, vitamag
 from services.dnevnik import check_dnevnik_user_registration
 from services.burgas24 import simulate_burgas24_login
@@ -69,10 +69,14 @@ def check_all_sites(email):
             modified_email = email.split('@')[0] + '@mail.bg'
             result = scraper(modified_email)
             email_display = modified_email  
+        elif site_name == "Chitanka.info":
+            modified_email = email.split('@')[0]
+            result = scraper(modified_email)
+            email_display = modified_email
         else:
             result = scraper(email)
-            email_display = email  
-
+            email_display = email
+            
         if result == "user_exists":
             print(f"🔴 {email_display} is already registered on {site_name}.")
         elif result == "user_does_not_exist":
