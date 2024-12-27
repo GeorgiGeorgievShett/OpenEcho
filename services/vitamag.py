@@ -1,8 +1,9 @@
 import requests
+from bs4 import BeautifulSoup
 
 def check_vitamag_email(email):
-    url = 'https://vitamag.bg/moyat-profil/'
-    
+    login_url = 'https://vitamag.bg/moyat-profil/'
+
     headers = {
         'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
         'Content-Type': 'application/x-www-form-urlencoded',
@@ -15,15 +16,23 @@ def check_vitamag_email(email):
         'Upgrade-Insecure-Requests': '1',
     }
 
+    response = requests.get(login_url, headers=headers)
+    
+    if response.status_code != 200:
+        return "request_error"
+
+    soup = BeautifulSoup(response.text, 'html.parser')
+    nonce = soup.find('input', {'name': 'woocommerce-login-nonce'})['value']
+
     payload = {
         'username': email,
         'password': "321321321",
-        'woocommerce-login-nonce': 'bcb8109f44',
+        'woocommerce-login-nonce': nonce, 
         '_wp_http_referer': '/moyat-profil/',
         'login': 'Вход',
     }
 
-    response = requests.post(url, headers=headers, data=payload)
+    response = requests.post(login_url, headers=headers, data=payload)
 
     if "Непознат имейл адрес" in response.text:
         return "user_does_not_exist"
