@@ -1,6 +1,6 @@
 import requests
 
-def chitanka_login_check(email):
+def check_username_registration(email):
     try:
         if "@" in email:
             username = email.split("@")[0]

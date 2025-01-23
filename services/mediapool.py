@@ -1,7 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 
-def check_mediapool_email_registration(email):
+def check_username_registration(email):
     """
     Check if an email is already registered on Mediapool.bg by submitting a registration attempt.
     This version includes extraction of the CSRF _nonce token before submitting the form.

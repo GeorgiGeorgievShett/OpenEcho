@@ -25,18 +25,18 @@ Monero Wallet: 861hzaFiGHuHzFsVbuk6zEj6uecBp9k38ecg8vQeVNN45VR6NL2fYvg1fSiYRhnDu
 To get started with OpenEcho, follow these steps:
 
 Clone the repository:
-git clone https://github.com/GeorgiGeorgievShett/OpenEcho
+**git clone https://github.com/GeorgiGeorgievShett/OpenEcho**
 
 Navigate to the project directory:
-cd OpenEcho
+**cd OpenEcho**
 
 Install the necessary dependencies:
-pip install -r requirements.txt
+**pip install -r requirements.txt**
 
 ## Usage
 Run OpenEcho with the following command:
 
-python main.py
+**python main.py**
 
 
 ## Rules and Coding Standards
@@ -72,4 +72,4 @@ Testing:
 Test your scraper thoroughly to confirm it behaves correctly and matches the expected output formats.
 
 If you would like to contribute to the project feel free to make a pull request.
-
+=======

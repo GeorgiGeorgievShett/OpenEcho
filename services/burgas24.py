@@ -1,6 +1,6 @@
 import requests
 
-def simulate_burgas24_login(email, password="generic_password"):
+def check_username_registration(email, password="generic_password"):
     login_url = 'https://users.burgas24.bg/login.html'
     
     headers = {

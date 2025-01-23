@@ -2,7 +2,7 @@ import requests
 from bs4 import BeautifulSoup
 
 
-def check_username_arenabg(email):
+def check_username_registration(email):
     session = requests.Session()
 
     login_url = "https://arenabg.com/bg/users/signin/"

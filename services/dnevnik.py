@@ -1,6 +1,6 @@
 import requests
 
-def check_dnevnik_user_registration(email):
+def check_username_registration(email):
     url = 'https://www.dnevnik.bg/user/pre-login'
     payload = {
         'login[_email]': email,

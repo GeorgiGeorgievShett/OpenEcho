@@ -2,7 +2,7 @@ import requests
 from bs4 import BeautifulSoup
 
 
-def check_username_teenproblem(email: str) -> str:
+def check_username_registration(email: str) -> str:
     url = 'https://www.teenproblem.net/users/login.html?redirect=/users/register/step3.html'
 
     headers = {
