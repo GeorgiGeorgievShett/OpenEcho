@@ -1,7 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 
-def check_forlife_email(email):
+def check_username_registration(email):
     session = requests.Session()
 
     try:

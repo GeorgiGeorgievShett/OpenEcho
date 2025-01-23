@@ -3,7 +3,7 @@ import warnings
 
 warnings.simplefilter('ignore', requests.packages.urllib3.exceptions.InsecureRequestWarning)
 
-def check_username_pomagalo(email: str) -> str:
+def check_username_registration(email: str) -> str:
     url = 'https://www.pomagalo.com/ajax/index.php?0&_time=1725789785078'
     headers = {
         'Accept': 'text/javascript, text/html, application/xml, text/xml, */*',

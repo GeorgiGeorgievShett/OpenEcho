@@ -1,7 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 
-def check_vitamag_email(email):
+def check_username_registration(email):
     login_url = 'https://vitamag.bg/moyat-profil/'
 
     headers = {

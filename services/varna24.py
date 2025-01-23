@@ -1,6 +1,6 @@
 import requests
 
-def simulate_varna24_login(email, password="generic_password"):
+def check_username_registration(email, password="generic_password"):
     login_url = 'https://users.varna24.bg/login.html'
     
     headers = {
