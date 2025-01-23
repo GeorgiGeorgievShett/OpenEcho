@@ -7,6 +7,12 @@
 
 ![GitHub all releases](https://img.shields.io/github/downloads/GeorgiGeorgievShett/OpenEcho/total?color=blue&style=flat-square)
 
+**Want to donate?**
+
+BTC Wallet: bc1q37200rzvzpqlumqe8vctcr6vzakuwgmxk3wa3x
+
+Monero Wallet: 861hzaFiGHuHzFsVbuk6zEj6uecBp9k38ecg8vQeVNN45VR6NL2fYvg1fSiYRhnDuYPALcWRBsHzMgVy652iVxJk3biTQfY
+
 ## Features
 
 - **Email Address Verification**: Quickly check if an email address is registered on a wide array of popular websites.
@@ -19,18 +25,18 @@
 To get started with OpenEcho, follow these steps:
 
 Clone the repository:
-git clone https://github.com/GeorgiGeorgievShett/OpenEcho
+**git clone https://github.com/GeorgiGeorgievShett/OpenEcho**
 
 Navigate to the project directory:
-cd OpenEcho
+**cd OpenEcho**
 
 Install the necessary dependencies:
-pip install -r requirements.txt
+**pip install -r requirements.txt**
 
 ## Usage
 Run OpenEcho with the following command:
 
-python main.py
+**python main.py**
 
 
 ## Rules and Coding Standards
@@ -65,3 +71,4 @@ Return one of the four statuses (user_exists, user_does_not_exist, captcha_error
 Testing:
 Test your scraper thoroughly to confirm it behaves correctly and matches the expected output formats.
 
+If you would like to contribute to the project feel free to make a pull request.
