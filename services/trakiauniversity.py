@@ -1,19 +1,19 @@
 import requests
 
-def check_username_registration(email, password):
+def check_ftt_username_registration(username, password):
     session = requests.Session()
-    login_url = 'https://www.bittel.bg/account/login'
+    login_url = 'https://ftt.uni-sz.bg/international-students/login.php'
 
     headers = {
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36',
         'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
-        'Origin': 'https://www.bittel.bg',
-        'Referer': 'https://www.bittel.bg/account/login',
+        'Origin': 'https://ftt.uni-sz.bg',
+        'Referer': 'https://ftt.uni-sz.bg/international-students/login.php',
         'Content-Type': 'application/x-www-form-urlencoded',
     }
 
     payload = {
-        'email': email,
+        'username': username,
         'password': password,
     }
 
@@ -23,9 +23,9 @@ def check_username_registration(email, password):
 
         print(f"Response Status Code: {response.status_code}")
 
-        if "Не е открит потребител с посочения мейл адрес." in response.text:
+        if "No account found with this username" in response.text:
             return "user_does_not_exist"
-        elif "Грешна парола. Опитайте отново." in response.text:
+        elif "Wrong password" in response.text or "wrong password" in response.text:
             return "user_exists"
         else:
             print("Unexpected response content:")
