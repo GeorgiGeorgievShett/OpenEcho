@@ -1,11 +1,12 @@
 from services import plovdiv24, mailbg, techoffnews, econt, abv_scraper, sportal
 from services import arenabg, pomagalo, teenproblem, dnevnik, burgas24
 from services import varna24, mediapool, chitanka, forlife, vitamag
-from services import bgeprosveta
+from services import bgeprosveta, twinkl
 
 SCRAPERS = {
     "ABV.bg": abv_scraper.check_username_registration,
     "e-prosveta": bgeprosveta.check_username_registration,
+    "twinkl.bg": twinkl.check_username_registration,
     "Plovdiv24.bg": plovdiv24.check_username_registration,
     "Mail.bg": mailbg.check_username_registration,
     "Offmedia.bg": techoffnews.check_username_registration,
