@@ -24,7 +24,6 @@ def check_username_registration(email):
             return "request_error"
 
         verification_token = token_input['value']
-        print(f"Retrieved Verification Token: {verification_token}")
 
         payload = {
             'Email': email,

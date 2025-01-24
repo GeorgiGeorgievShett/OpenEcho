@@ -18,8 +18,23 @@ def check_username_registration(email):
         response = session.get(login_page_url, headers=headers)
         response.raise_for_status()
         
+        # Print the full HTML response for debugging
+        print("HTML Response:")
+        print(response.text)
+
         soup = BeautifulSoup(response.text, 'html.parser')
-        csrf_token = soup.find('input', {'name': 'csrf'})['value']
+        
+        # Attempt to find the CSRF token
+        csrf_input = soup.find('input', {'name': 'csrf'})
+        if not csrf_input:
+            print("CSRF input element not found!")
+            return "request_error"
+        
+        csrf_token = csrf_input.get('value')
+        if not csrf_token:
+            print("CSRF token value not found!")
+            return "request_error"
+        
         print(f"Retrieved CSRF Token: {csrf_token}")
 
         payload = {
@@ -47,3 +62,13 @@ def check_username_registration(email):
     except requests.RequestException as e:
         print("Request failed:", str(e))
         return "request_error"
+
+if __name__ == "__main__":
+    email_to_check = "hope_hope_1996@abv.bg"
+    result = check_username_registration(email_to_check)
+    print(f"Result: {result}")
+
+
+testemail = "tetetete@abv.bg"
+result = check_username_registration(testemail)
+print(result)

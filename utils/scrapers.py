@@ -6,7 +6,7 @@ from services import bgeprosveta, twinkl, cyberclubbg, bittel
 SCRAPERS = {
     "ABV.bg": abv_scraper.check_username_registration,
     "e-prosveta": bgeprosveta.check_username_registration,
-    "twinkl.bg": twinkl.check_username_registration,
+    #"twinkl.bg": twinkl.check_username_registration,
     "bittel.bg": bittel.check_username_registration,
     "cyberclub.bg": cyberclubbg.check_username_registration,
     "Plovdiv24.bg": plovdiv24.check_username_registration,

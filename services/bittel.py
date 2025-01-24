@@ -1,6 +1,6 @@
 import requests
 
-def check_username_registration(email, password):
+def check_username_registration(email):
     session = requests.Session()
     login_url = 'https://www.bittel.bg/account/login'
 
@@ -14,24 +14,19 @@ def check_username_registration(email, password):
 
     payload = {
         'email': email,
-        'password': password,
+        'password': '321321321',
     }
 
     try:
         response = session.post(login_url, headers=headers, data=payload)
         response.raise_for_status()
 
-        print(f"Response Status Code: {response.status_code}")
-
         if "Не е открит потребител с посочения мейл адрес." in response.text:
             return "user_does_not_exist"
         elif "Грешна парола. Опитайте отново." in response.text:
             return "user_exists"
         else:
-            print("Unexpected response content:")
-            print(response.text)
             return "request_error"
 
     except requests.RequestException as e:
-        print("Request failed:", str(e))
         return "request_error"

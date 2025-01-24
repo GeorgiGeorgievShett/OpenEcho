@@ -30,5 +30,4 @@ def check_username_registration(email):
             return "request_error"
         
     except requests.RequestException as e:
-        print("Request failed:", str(e))
         return "request_error"
