@@ -60,9 +60,8 @@ Function Implementation: Implement a function  **___check_email____"enter websit
 
 **Updating main.py:**
 
-Import Your New Scraper: Add an import statement for your new scraper at the beginning of main.py.
-
-Add to Scraper Dictionary: Update the scrapers dictionary in the check_all_sites function to include your new site and its corresponding function.
+Import Your New Scraper: Fork the repository and build your scraper, make sure it is asynchronous and follows our output conventions.
+Then update the utils.scrapers.py file with your scraper, keep the last ones for modified outputs like email to username.
 
 Follow Output Conventions:
 Ensure your scraper function handles responses and errors according to the defined output statuses.
