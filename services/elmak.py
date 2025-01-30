@@ -11,7 +11,7 @@ HEADERS = {
     "Accept-Language": "en-GB,en-US;q=0.9,en;q=0.8"
 }
 
-async def check_elmak_username_registration(email):
+async def check_username_registration(email):
     async with aiohttp.ClientSession() as session:
         try:
             async with session.get(LOGIN_PAGE_URL, headers=HEADERS) as response:
