@@ -1,6 +1,6 @@
-import requests
+import aiohttp
 
-def check_username_registration(email):
+async def check_username_registration(email: str):
     url = f"https://id.accounts.sportal.bg/native/emails/{email}?brand=sportal"
 
     headers = {
@@ -8,16 +8,22 @@ def check_username_registration(email):
         'Referrer-Policy': 'same-origin'
     }
 
-    response = requests.get(url, headers=headers)
+    async with aiohttp.ClientSession() as session:
+        try:
+            async with session.get(url, headers=headers) as response:
+                response.raise_for_status()
 
-    if response.status_code == 200:
-        response_json = response.json()
-        exists_in_native = response_json.get("existsInNative", False)
-        exists_in_legacy = response_json.get("existsInLegacy", False)
+                if response.status == 200:
+                    response_json = await response.json()
+                    exists_in_native = response_json.get("existsInNative", False)
+                    exists_in_legacy = response_json.get("existsInLegacy", False)
 
-        if not exists_in_native and not exists_in_legacy:
-            return "user_does_not_exist"
-        elif response_json.get("existsInNative", True):
-            return "user_exists"
-    else:
-        return "unknown_response"
+                    if not exists_in_native and not exists_in_legacy:
+                        return "user_does_not_exist"
+                    elif exists_in_native:
+                        return "user_exists"
+                else:
+                    return "unknown_response"
+
+        except aiohttp.ClientError as e:
+            return "request_error"

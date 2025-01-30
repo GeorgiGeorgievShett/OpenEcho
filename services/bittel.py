@@ -1,7 +1,10 @@
-import requests
+import aiohttp
 
-def check_username_registration(email):
-    session = requests.Session()
+
+async def check_username_registration(email):
+    """
+    Asynchronously checks the username registration for Bittel.bg.
+    """
     login_url = 'https://www.bittel.bg/account/login'
 
     headers = {
@@ -18,15 +21,18 @@ def check_username_registration(email):
     }
 
     try:
-        response = session.post(login_url, headers=headers, data=payload)
-        response.raise_for_status()
+        async with aiohttp.ClientSession() as session:
+            async with session.post(login_url, headers=headers, data=payload) as response:
+                response.raise_for_status()
 
-        if "Не е открит потребител с посочения мейл адрес." in response.text:
-            return "user_does_not_exist"
-        elif "Грешна парола. Опитайте отново." in response.text:
-            return "user_exists"
-        else:
-            return "request_error"
+                response_text = await response.text()
 
-    except requests.RequestException as e:
+                if "Не е открит потребител с посочения мейл адрес." in response_text:
+                    return "user_does_not_exist"
+                elif "Грешна парола. Опитайте отново." in response_text:
+                    return "user_exists"
+                else:
+                    return "request_error"
+
+    except aiohttp.ClientError:
         return "request_error"

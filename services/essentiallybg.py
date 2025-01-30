@@ -1,8 +1,7 @@
-import requests
+import aiohttp
 from bs4 import BeautifulSoup
 
-def check_username_registration(email):
-    session = requests.Session()
+async def check_username_registration(email):
     login_url = 'https://essentially.bg/moyat-profil/?action=login'
     
     headers = {
@@ -12,37 +11,37 @@ def check_username_registration(email):
         'Origin': 'https://essentially.bg',
         'Referer': 'https://essentially.bg/moyat-profil/?action=login',
     }
-    
-    try:
-        response = session.get(login_url, headers=headers)
-        response.raise_for_status()
-        
-        soup = BeautifulSoup(response.text, 'html.parser')
-        nonce_field = soup.find("input", {"name": "woocommerce-login-nonce"})
-        
-        if not nonce_field:
-            return "request_error"
-        
-        nonce = nonce_field.get("value")
-        
-        payload = {
-            'action': 'login',
-            'username': email,
-            'password': 'dummy_password',
-            'woocommerce-login-nonce': nonce,
-            '_wp_http_referer': '/moyat-profil/?action=login',
-            'login': 'Вход',
-        }
-        
-        response = session.post(login_url, headers=headers, data=payload)
-        response.raise_for_status()
-        
-        if "Непознат имейл адрес." in response.text:
-            return "user_does_not_exist"
-        elif "Паролата, която въведохте за имейл адреса" in response.text:
-            return "user_exists"
-        else:
-            return "request_error"
 
-    except requests.RequestException:
+    try:
+        async with aiohttp.ClientSession() as session:
+            async with session.get(login_url, headers=headers) as response:
+                response.raise_for_status()
+                soup = BeautifulSoup(await response.text(), 'html.parser')
+                nonce_field = soup.find("input", {"name": "woocommerce-login-nonce"})
+
+                if not nonce_field:
+                    return "request_error"
+
+                nonce = nonce_field.get("value")
+
+                payload = {
+                    'action': 'login',
+                    'username': email,
+                    'password': 'dummy_password',
+                    'woocommerce-login-nonce': nonce,
+                    '_wp_http_referer': '/moyat-profil/?action=login',
+                    'login': 'Вход',
+                }
+
+                async with session.post(login_url, headers=headers, data=payload) as response:
+                    response.raise_for_status()
+
+                    if "Непознат имейл адрес." in await response.text():
+                        return "user_does_not_exist"
+                    elif "Паролата, която въведохте за имейл адреса" in await response.text():
+                        return "user_exists"
+                    else:
+                        return "request_error"
+
+    except aiohttp.ClientError:
         return "request_error"

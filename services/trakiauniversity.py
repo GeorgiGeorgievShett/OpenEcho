@@ -1,7 +1,6 @@
-import requests
+import aiohttp
 
-def check_ftt_username_registration(username, password):
-    session = requests.Session()
+async def check_ftt_username_registration(email):
     login_url = 'https://ftt.uni-sz.bg/international-students/login.php'
 
     headers = {
@@ -13,25 +12,23 @@ def check_ftt_username_registration(username, password):
     }
 
     payload = {
-        'username': username,
-        'password': password,
+        'username': email,
+        'password': '321321321',
     }
 
-    try:
-        response = session.post(login_url, headers=headers, data=payload)
-        response.raise_for_status()
+    async with aiohttp.ClientSession() as session:
+        try:
+            async with session.post(login_url, headers=headers, data=payload) as response:
+                response.raise_for_status()
 
-        print(f"Response Status Code: {response.status_code}")
+                response_text = await response.text()
 
-        if "No account found with this username" in response.text:
-            return "user_does_not_exist"
-        elif "Wrong password" in response.text or "wrong password" in response.text:
-            return "user_exists"
-        else:
-            print("Unexpected response content:")
-            print(response.text)
+                if "No account found with this username" in response_text:
+                    return "user_does_not_exist"
+                elif "Wrong password" in response_text or "wrong password" in response_text:
+                    return "user_exists"
+                else:
+                    return "request_error"
+
+        except aiohttp.ClientError:
             return "request_error"
-
-    except requests.RequestException as e:
-        print("Request failed:", str(e))
-        return "request_error"

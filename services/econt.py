@@ -1,7 +1,7 @@
-import requests
+import aiohttp
 import json
 
-def check_username_registration(email):
+async def check_username_registration(email):
     url = "https://login.econt.com/rpc.php"
 
     headers = {
@@ -20,13 +20,21 @@ def check_username_registration(email):
         }
     }
 
-    response = requests.post(url, headers=headers, data=json.dumps(payload))
+    try:
+        async with aiohttp.ClientSession() as session:
+            async with session.post(url, headers=headers, data=json.dumps(payload)) as response:
+                response.raise_for_status()
 
-    response_json = response.json()
+                response_json = await response.json()
 
-    if "Липсва профил с този имейл" in response_json.get('error', {}).get('message', ''):
-        return "user_does_not_exist"
-    elif "Моля, въведете валидна парола." in response_json.get('error', {}).get('message', ''):
-        return "user_exists"
-    else:
-        return "unknown_response"
+                if "Липсва профил с този имейл" in response_json.get('error', {}).get('message', ''):
+                    return "user_does_not_exist"
+                elif "Моля, въведете валидна парола." in response_json.get('error', {}).get('message', ''):
+                    return "user_exists"
+                else:
+                    return "unknown_response"
+
+    except aiohttp.ClientError:
+        return "request_error"
+    except json.JSONDecodeError:
+        return "json_error"

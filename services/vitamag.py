@@ -1,7 +1,7 @@
-import requests
+import aiohttp
 from bs4 import BeautifulSoup
 
-def check_username_registration(email):
+async def check_username_registration(email):
     login_url = 'https://vitamag.bg/moyat-profil/'
 
     headers = {
@@ -16,27 +16,36 @@ def check_username_registration(email):
         'Upgrade-Insecure-Requests': '1',
     }
 
-    response = requests.get(login_url, headers=headers)
-    
-    if response.status_code != 200:
-        return "request_error"
+    async with aiohttp.ClientSession() as session:
+        try:
+            async with session.get(login_url, headers=headers) as response:
+                if response.status != 200:
+                    return "request_error"
 
-    soup = BeautifulSoup(response.text, 'html.parser')
-    nonce = soup.find('input', {'name': 'woocommerce-login-nonce'})['value']
+                soup = BeautifulSoup(await response.text(), 'html.parser')
+                nonce_input = soup.find('input', {'name': 'woocommerce-login-nonce'})
+                if nonce_input and 'value' in nonce_input.attrs:
+                    nonce = nonce_input['value']
+                else:
+                    return "request_error"
 
-    payload = {
-        'username': email,
-        'password': "321321321",
-        'woocommerce-login-nonce': nonce, 
-        '_wp_http_referer': '/moyat-profil/',
-        'login': 'Вход',
-    }
+                payload = {
+                    'username': email,
+                    'password': "321321321",
+                    'woocommerce-login-nonce': nonce, 
+                    '_wp_http_referer': '/moyat-profil/',
+                    'login': 'Вход',
+                }
 
-    response = requests.post(login_url, headers=headers, data=payload)
+                async with session.post(login_url, headers=headers, data=payload) as response:
+                    response_text = await response.text()
 
-    if "Непознат имейл адрес" in response.text:
-        return "user_does_not_exist"
-    elif "Паролата, която въведохте за имейл адреса" in response.text:
-        return "user_exists"
-    else:
-        return "request_error"
+                    if "Непознат имейл адрес" in response_text:
+                        return "user_does_not_exist"
+                    elif "Паролата, която въведохте за имейл адреса" in response_text:
+                        return "user_exists"
+                    else:
+                        return "request_error"
+        
+        except aiohttp.ClientError:
+            return "request_error"

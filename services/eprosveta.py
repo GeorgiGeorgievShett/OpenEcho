@@ -1,6 +1,10 @@
-import requests
+import aiohttp
 
-def check_username_registration(email):
+
+async def check_username_registration(email):
+    """
+    Asynchronously checks the username registration for E-Prosveta.bg.
+    """
     login_url = 'https://auth.e-prosveta.bg/user/auth'
     
     headers = {
@@ -20,14 +24,16 @@ def check_username_registration(email):
     }
 
     try:
-        response = requests.post(login_url, headers=headers, json=payload)
+        async with aiohttp.ClientSession() as session:
+            async with session.post(login_url, headers=headers, json=payload) as response:
+                response_text = await response.text()
 
-        if '"error":"wrong_email"' in response.text:
-            return "user_does_not_exist"
-        elif '"error":"wrong_password"' in response.text:
-            return "user_exists"
-        else:
-            return "request_error"
-        
-    except requests.RequestException as e:
+                if '"error":"wrong_email"' in response_text:
+                    return "user_does_not_exist"
+                elif '"error":"wrong_password"' in response_text:
+                    return "user_exists"
+                else:
+                    return "request_error"
+
+    except aiohttp.ClientError:
         return "request_error"

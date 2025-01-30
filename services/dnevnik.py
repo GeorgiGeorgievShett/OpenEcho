@@ -1,6 +1,10 @@
-import requests
+import aiohttp
 
-def check_username_registration(email):
+
+async def check_username_registration(email):
+    """
+    Asynchronously checks the username registration for Dnevnik.bg.
+    """
     url = 'https://www.dnevnik.bg/user/pre-login'
     payload = {
         'login[_email]': email,
@@ -15,18 +19,19 @@ def check_username_registration(email):
     }
 
     try:
-        response = requests.post(url, headers=headers, data=payload)
-        response.raise_for_status()
+        async with aiohttp.ClientSession() as session:
+            async with session.post(url, headers=headers, data=payload) as response:
+                response.raise_for_status()
 
-        response_data = response.json()
-        if response_data.get("err_cnt") == 0:
-            return "user_exists"
-        elif response_data.get("err_cnt") == 1:
-            return "user_does_not_exist"
-        else:
-            return "unknown_error"
+                response_data = await response.json()
+                if response_data.get("err_cnt") == 0:
+                    return "user_exists"
+                elif response_data.get("err_cnt") == 1:
+                    return "user_does_not_exist"
+                else:
+                    return "unknown_error"
 
-    except requests.exceptions.RequestException:
+    except aiohttp.ClientError:
         return "request_error"
     except ValueError:
         return "json_error"

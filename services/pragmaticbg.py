@@ -1,7 +1,6 @@
-import requests
+import aiohttp
 
-def check_username_registration(email):
-    session = requests.Session()
+async def check_username_registration(email: str):
     login_url = 'https://pragmatic.bg/wp-login.php'
     
     headers = {
@@ -11,7 +10,7 @@ def check_username_registration(email):
         'Origin': 'https://pragmatic.bg',
         'Referer': 'https://pragmatic.bg/wp-login.php',
     }
-    
+
     payload = {
         'log': email,
         'pwd': 'dummy_password',
@@ -19,19 +18,21 @@ def check_username_registration(email):
         'redirect_to': 'https://pragmatic.bg/wp-admin/',
         'testcookie': '1'
     }
-    
-    try:
-        session.get(login_url, headers=headers)
-        
-        response = session.post(login_url, headers=headers, data=payload)
-        response.raise_for_status()
 
-        if "Unknown email address." in response.text:
-            return "user_does_not_exist"
-        elif "Error: The password you entered for the username" in response.text or "Error: The password you entered for the email address" in response.text:
-            return "user_exists"
-        else:
+    async with aiohttp.ClientSession() as session:
+        try:
+            await session.get(login_url, headers=headers)
+
+            async with session.post(login_url, headers=headers, data=payload) as response:
+                response.raise_for_status()
+                response_text = await response.text()
+
+                if "Unknown email address." in response_text:
+                    return "user_does_not_exist"
+                elif "Error: The password you entered for the username" in response_text or "Error: The password you entered for the email address" in response_text:
+                    return "user_exists"
+                else:
+                    return "request_error"
+
+        except aiohttp.ClientError as e:
             return "request_error"
-
-    except requests.RequestException as e:
-        return "request_error"
