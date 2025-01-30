@@ -1,8 +1,8 @@
 import aiohttp
 from bs4 import BeautifulSoup
 
-LOGIN_PAGE_URL = "https://za-doma.bg/my-account/"
-LOGIN_POST_URL = "https://za-doma.bg/my-account/?action=login"
+LOGIN_PAGE_URL = "https://elmak.bg/my-account-2/"
+LOGIN_POST_URL = "https://elmak.bg/my-account-2/"
 
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36",
@@ -11,10 +11,9 @@ HEADERS = {
     "Accept-Language": "en-GB,en-US;q=0.9,en;q=0.8"
 }
 
-async def check_username_registration(email):
+async def check_elmak_username_registration(email):
     async with aiohttp.ClientSession() as session:
         try:
-
             async with session.get(LOGIN_PAGE_URL, headers=HEADERS) as response:
                 if response.status != 200:
                     print("Failed to fetch the login page.")
@@ -32,12 +31,11 @@ async def check_username_registration(email):
             nonce_value = nonce_input["value"]
 
             payload = {
-                "action": "login",
                 "username": email,
                 "password": "dummy_password",
                 "woocommerce-login-nonce": nonce_value,
-                "_wp_http_referer": "/my-account/",
-                "login": "Вход"
+                "_wp_http_referer": "/my-account-2/",
+                "login": "Влизане"
             }
 
             async with session.post(LOGIN_POST_URL, data=payload, headers=HEADERS) as login_response:

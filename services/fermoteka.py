@@ -1,6 +1,6 @@
-import requests
+import aiohttp
 
-def check_user_status(email):
+async def check_username_registration(email):
     url = "https://fermoteka.bg/login"
 
     payload = {
@@ -36,17 +36,16 @@ def check_user_status(email):
     }
 
     try:
-        response = requests.post(url, data=payload, headers=headers, cookies=cookies)
+        async with aiohttp.ClientSession() as session:
+            async with session.post(url, data=payload, headers=headers, cookies=cookies) as response:
+                response_text = await response.text()
 
-        response_text = response.text
+                if "Няма такъв потребител" in response_text:
+                    return "user_does_not_exist"
+                elif "Данните са невалидни" in response_text:
+                    return "user_exists"
+                else:
+                    return "request_error"
 
-        if "Няма такъв потребител" in response_text:
-            return "user_does_not_exist"
-        elif "Данните са невалидни" in response_text:
-            return "user_exists"
-        else:
-            return "request_error"
-
-    except requests.RequestException as e:
-        print(f"Request failed: {str(e)}")
+    except aiohttp.ClientError as e:
         return "request_error"

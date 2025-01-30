@@ -1,13 +1,14 @@
-import requests
+import aiohttp
+from urllib.parse import quote
 
-def check_username_registration(email_or_username):
+async def check_username_registration(email_or_username):
     if '@mail.bg' not in email_or_username:
         username = email_or_username.split('@')[0]
         email = f"{username}@mail.bg"
     else:
         email = email_or_username
 
-    encoded_email = requests.utils.quote(email)
+    encoded_email = quote(email)
     url = f'https://mail.bg/signup/checkuser/format/json/user/{encoded_email}'
 
     headers = {
@@ -27,24 +28,22 @@ def check_username_registration(email_or_username):
     }
 
     try:
-        response = requests.get(url, headers=headers, cookies=cookies)
-        response.raise_for_status()
+        async with aiohttp.ClientSession() as session:
+            async with session.get(url, headers=headers, cookies=cookies) as response:
+                response.raise_for_status()
 
-        try:
-            response_json = response.json()
-        except ValueError:
-            return "response_not_json"
+                try:
+                    response_json = await response.json()
+                except ValueError:
+                    return "response_not_json"
 
-        if response_json.get('result') is True:
-            return "user_does_not_exist"
-        elif response_json.get('result') is False:
-            return "user_exists"
-        else:
-            return "unknown_response"
-
-    except requests.exceptions.RequestException as e:
-        print(f"Request error: {e}")
+                if response_json.get('result') is True:
+                    return "user_does_not_exist"
+                elif response_json.get('result') is False:
+                    return "user_exists"
+                else:
+                    return "unknown_response"
+    except aiohttp.ClientError:
         return "request_error"
     except ValueError:
-        return "json_error"
-
+        return "request_error"

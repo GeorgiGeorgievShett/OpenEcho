@@ -1,10 +1,8 @@
-import requests
-import warnings
+import aiohttp
 
-warnings.simplefilter('ignore', requests.packages.urllib3.exceptions.InsecureRequestWarning)
-
-def check_username_registration(email: str) -> str:
+async def check_username_registration(email: str) -> str:
     url = 'https://www.pomagalo.com/ajax/index.php?0&_time=1725789785078'
+    
     headers = {
         'Accept': 'text/javascript, text/html, application/xml, text/xml, */*',
         'Accept-Encoding': 'gzip, deflate, br, zstd',
@@ -21,6 +19,7 @@ def check_username_registration(email: str) -> str:
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36',
         'X-Requested-With': 'XMLHttpRequest'
     }
+    
     payload = {
         '_time': '1725789785078',
         'rpn': 'pluginsSystemLoginClean',
@@ -32,16 +31,18 @@ def check_username_registration(email: str) -> str:
         'requestUrl': 'https://www.pomagalo.com/'
     }
 
-    try:
-        response = requests.post(url, headers=headers, data=payload, verify=False)
-        response.raise_for_status()
+    async with aiohttp.ClientSession() as session:
+        try:
+            async with session.post(url, headers=headers, data=payload, ssl=False) as response:
+                response.raise_for_status()
+                response_text = await response.text()
 
-        if "Грешно потребителско име или e-mail." in response.text:
-            return 'user_does_not_exist'
-        elif "Въвели сте грешна парола" in response.text:
-            return 'user_exists'
-        else:
-            return 'unknown_response'
-    except requests.RequestException as e:
-        return 'request_error'
+                if "Грешно потребителско име или e-mail." in response_text:
+                    return 'user_does_not_exist'
+                elif "Въвели сте грешна парола" in response_text:
+                    return 'user_exists'
+                else:
+                    return 'unknown_response'
 
+        except aiohttp.ClientError as e:
+            return 'request_error'

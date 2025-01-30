@@ -1,8 +1,7 @@
-import requests
+import aiohttp
 from bs4 import BeautifulSoup
 
-
-def check_username_registration(email: str) -> str:
+async def check_username_registration(email: str) -> str:
     url = 'https://www.teenproblem.net/users/login.html?redirect=/users/register/step3.html'
 
     headers = {
@@ -23,15 +22,21 @@ def check_username_registration(email: str) -> str:
         'login_btn': ''
     }
 
-    response = requests.post(url, headers=headers, data=payload)
-    response.raise_for_status()
+    async with aiohttp.ClientSession() as session:
+        try:
+            async with session.post(url, headers=headers, data=payload) as response:
+                response.raise_for_status()
 
+                response_text = await response.text()
 
-    soup = BeautifulSoup(response.text, 'html.parser')
+                soup = BeautifulSoup(response_text, 'html.parser')
 
-    if soup.find('div', class_='msg not_correct') and 'Грешна парола' in response.text:
-        return 'user_exists'
-    elif 'Несъществуващ акаунт' in response.text:
-        return 'user_does_not_exist'
-    else:
-        return 'unknown_response'
+                if soup.find('div', class_='msg not_correct') and 'Грешна парола' in response_text:
+                    return 'user_exists'
+                elif 'Несъществуващ акаунт' in response_text:
+                    return 'user_does_not_exist'
+                else:
+                    return 'unknown_response'
+
+        except aiohttp.ClientError as e:
+            return 'request_error'

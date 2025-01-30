@@ -1,11 +1,14 @@
-from services import plovdiv24, mailbg, techoffnews, econt, abv_scraper, sportal
-from services import arenabg, pomagalo, teenproblem, dnevnik, burgas24
-from services import varna24, mediapool, chitanka, forlife, vitamag
-from services import bgeprosveta, cyberclubbg, bittel, pragmaticbg, essentiallybg
+from services import arenabg, abv, eprosveta, bittel, burgas24
+from services import chitanka, cyberclubbg, dnevnik, econt
+from services import essentiallybg, forlife, mailbg, mediapool
+from services import plovdiv24, pomagalo, pragmaticbg, sportal
+from services import teenproblem, trakiauniversity, vitamag
+from services import varna24, techoffnews, fermoteka, zadoma
+from services import elmak
 
 SCRAPERS = {
-    "ABV.bg": abv_scraper.check_username_registration,
-    "Bg.e-prosveta.bg": bgeprosveta.check_username_registration,
+    "ABV.bg": abv.check_username_registration,
+    "Bg.e-prosveta.bg": eprosveta.check_username_registration,
     "Bittel.bg": bittel.check_username_registration,
     "Cyberclub.bg": cyberclubbg.check_username_registration,
     "Plovdiv24.bg": plovdiv24.check_username_registration,
@@ -21,7 +24,11 @@ SCRAPERS = {
     "Varna24.bg": varna24.check_username_registration,
     "Mediapool.bg": mediapool.check_username_registration,
     "Vitamag.bg": vitamag.check_username_registration,
+    "uni-sz.bg": trakiauniversity.check_ftt_username_registration,
     "Essentially.bg": essentiallybg.check_username_registration,
+    "Fermoteka.bg": fermoteka.check_username_registration,
+    "Za-doma.bg": zadoma.check_username_registration,
+    "elmak.bg": elmak.check_username_registration,
     "Forlife.bg": forlife.check_username_registration,
     "Mail.bg": mailbg.check_username_registration,
     "Chitanka.info": chitanka.check_username_registration,

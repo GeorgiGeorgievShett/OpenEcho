@@ -1,35 +1,32 @@
-import requests
+import aiohttp
 
-def check_username_registration(email, password="generic_password"):
+async def check_username_registration(email, password="generic_password"):
     login_url = 'https://users.varna24.bg/login.html'
-    
+
     headers = {
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36',
-        'Referer': 'http://www.varna24.bg/',  
+        'Referer': 'http://www.varna24.bg/',
     }
-    
-    # Payload for login attempt (form data)
+
     payload = {
         'loginemail': email,
-        'loginpass': password,  # Use the default or provided password
-        'urlref': 'http://www.varna24.bg/'  
+        'loginpass': password,
+        'urlref': 'http://www.varna24.bg/'
     }
 
-    session = requests.Session()
+    async with aiohttp.ClientSession() as session:
+        try:
+            async with session.post(login_url, headers=headers, data=payload) as response:
+                response.raise_for_status()
 
-    try:
-       
-        response = session.post(login_url, headers=headers, data=payload)
-        response.raise_for_status()  
+                response_text = await response.text()
 
-       
-        if "Грешна парола!" in response.text:
-            return "user_exists"  # Email exists, but the password is wrong
-        elif "Няма регистрация с посочения email/потребителско име!" in response.text:
-            return "user_does_not_exist"  
-        else:
+                if "Грешна парола!" in response_text:
+                    return "user_exists" 
+                elif "Няма регистрация с посочения email/потребителско име!" in response_text:
+                    return "user_does_not_exist"
+                else:
+                    return "request_error"
+
+        except aiohttp.ClientError:
             return "request_error"
-
-    except requests.RequestException as e:
-        print(f"Request error: {e}")
-        return "request_error"
