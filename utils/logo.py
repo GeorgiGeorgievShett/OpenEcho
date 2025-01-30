@@ -11,8 +11,7 @@ def display_logo():
     print(logo)
     print("Welcome to OpenEcho - Email Registration Checker for popular and unpopular Bulgarian websites.")
     print("-------------------------------------------------\n")
-    print("Here is a list of sites which are worth checking manually:")
-    print("Here is a list of sites which are worth checking manually:")
+    print("Here is a list of sites which can be checked manually:")
     print("""
     - https://bg.airbnb.com/
     - https://www.lcwaikiki.bg/bg-BG/BG/login
