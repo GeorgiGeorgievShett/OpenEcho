@@ -19,7 +19,7 @@ def display_logo():
     - https://banker.bg/wp-login.php
     - https://mu-sofia.bg/wp-login.php
     - https://tu-sofia.bg/login
-    - https://shop.gaming.bg/ // Въвели сте грешен имейл или парола // Не съществува клиент с такъв имейл //
+    - https://shop.gaming.bg/
     - https://olx.bg/
     - https://bg-mamma.com/
     - https://onlinemashini.bg/
